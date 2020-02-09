@@ -1,5 +1,5 @@
-
 #!/bin/bash
 mkdir -p ~/.vim/autoload
 git clone https://github.com/junegunn/vim-plug.git #vim-plug
 cp vim-plug/plug.vim ~/.vim/autoload/
+rm -rf vim-plug
