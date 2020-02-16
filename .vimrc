@@ -1,18 +1,17 @@
 call plug#begin('~/.vim/plugged')
-Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+
 Plug 'https://github.com/majutsushi/tagbar.git'	
 Plug 'https://github.com/junegunn/vim-easy-align'
 Plug 'https://github.com/scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'https://github.com/tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'https://github.com/junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'https://github.com/rust-lang/rust.vim'
-Plug 'https://github.com/ycm-core/YouCompleteMe'
+Plug 'https://github.com/Chiel92/vim-autoformat'
+
 call plug#end()
 map <C-t> :NERDTree  <CR>
 map <C-y> :TagbarToggle<CR>
 "vim insert
 map <C-c> <esc>
-map <C-f> :RustFmt<CR>
+map <C-f> :Autoformat<CR>
 imap <C-l> <Right>
 imap <C-h> <Left>
 imap <C-k> <Up>
