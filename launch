@@ -1,13 +1,6 @@
 #!/bin/bash
-function end_launch(){
-type yum >/dev/null 2>&1 && yum -y install ctags&&exit 0
-type pacman >/dev/null 2>&1 && pacman -Sy ctags&&exit 0
-type apt >/dev/null 2>&1 && apt install ctags -y&&exit 0
-echo -e "please install ctags!"&&exit 1
-}
 mkdir -p ~/.vim/autoload
 git clone https://github.com/junegunn/vim-plug.git #vim-plug
 cp vim-plug/plug.vim ~/.vim/autoload/
 cp .vimrc ~/
 rm -rf vim-plug
-type ctags >/dev/null 2>&1 ||end_launch
