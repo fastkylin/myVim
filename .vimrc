@@ -2,9 +2,19 @@ call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/majutsushi/tagbar.git'
 Plug 'https://github.com/junegunn/vim-easy-align'
 Plug 'https://github.com/scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'https://github.com/octol/vim-cpp-enhanced-highlight'
 call plug#end()
+
 map <C-l> :NERDTree  <CR>
 map <C-t> :TagbarToggle<CR>
+"vim-cpp-enhanced-highlight
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
+let g:cpp_posix_standard = 1
+let g:cpp_experimental_simple_template_highlight = 1
+let g:cpp_concepts_highlight = 1
+let g:cpp_no_function_highlight = 1
 "vim insert
 map <C-c> <esc>
 imap <C-l> <Right>
@@ -12,6 +22,8 @@ imap <C-h> <Left>
 imap <C-k> <Up>
 imap <C-j> <Down>
 imap <C-x> <Del>
+"vim config 
+colorscheme darkblue
 set modifiable
 set nocompatible
 filetype on
